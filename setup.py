@@ -9,6 +9,7 @@ def read(name):
 
 setuptools.setup(
     name='mkdocs-exclude',
+    zip_safe = False,
     version='1.0.2',
     packages=['mkdocs_exclude'],
     url='https://github.com/apenwarr/mkdocs-exclude',
