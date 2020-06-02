@@ -9,7 +9,6 @@ def read(name):
 
 setuptools.setup(
     name='mkdocs-exclude',
-    zip_safe = False,
     version='1.0.2',
     packages=['mkdocs_exclude'],
     url='https://github.com/apenwarr/mkdocs-exclude',
@@ -26,7 +25,7 @@ setuptools.setup(
     # Without them, mkdocs will not be able to recognize it.
     entry_points={
         'mkdocs.plugins': [
-            'exclude = mkdocs_exclude:Exclude',
+            'exclude = mkdocs_exclude.plugin:Exclude',
         ]
     },
 )
