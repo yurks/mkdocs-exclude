@@ -1,6 +1,6 @@
 import os.path
 import setuptools
-from setuptools import setup
+from setuptools import setup, find_packages
 
 def read(name):
     mydir = os.path.abspath(os.path.dirname(__file__))
@@ -19,7 +19,8 @@ setuptools.setup(
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
     install_requires=['mkdocs'],
-
+    python_requires='>=2.7',
+    packages=find_packages(),
     # The following rows are important to register your plugin.
     # The format is "(plugin name) = (plugin folder):(class name)"
     # Without them, mkdocs will not be able to recognize it.
